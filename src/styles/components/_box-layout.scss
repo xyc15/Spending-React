@@ -1,0 +1,26 @@
+.box-layout {
+    background: url('/images/bg.jpg');
+        //the url path is not a path that takes into account the entire directory structure of our project ,
+    //bacause thi scode runs in the browser, and the browser only has access to what's in the public directory,
+    //  "/" brings us to the root of the web server (i.e., the puclic folder)
+    background-size: cover; //make sure to always cover the container with the image
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; //make sure the image covers the whole viewport height
+    width: 100vw; //make sure the image covers the whole viewport width
+}
+
+.box-layout__box {
+    background: fade-out(white, 0.15);
+    border-radius:3px;
+    text-align: center;
+    width: 23rem;
+    padding: $l-size $m-size;
+
+}
+
+.box-layout__title {
+    margin: 0 0 $m-size 0;
+    line-height: 1;
+}
