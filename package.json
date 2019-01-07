@@ -30,7 +30,7 @@
     "extract-text-webpack-plugin": "3.0.0",
     "firebase": "4.2.0",
     "history": "4.7.2",
-    "moment": "2.18.1",
+    "moment": "2.19.3",
     "node-sass": "^4.9.2",
     "normalize.css": "7.0.0",
     "numeral": "2.0.6",
@@ -38,9 +38,13 @@
     "react": "16.0.0",
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.7.0",
+<<<<<<< HEAD
     "react-dom": "16.0.0",
     "react-flash-message": "^1.0.2",
     "react-icons": "^3.2.2",
+=======
+    "react-dom": "16.0.1",
+>>>>>>> d4145a3516df947ac9db117aa5cc0b1150a6e87c
     "react-modal": "2.2.2",
     "react-redux": "5.0.5",
     "react-router-dom": "4.2.2",
@@ -63,6 +67,6 @@
     "jest": "20.0.4",
     "live-server": "^1.2.0",
     "react-test-renderer": "16.0.0",
-    "webpack-dev-server": "2.5.1"
+    "webpack-dev-server": "3.1.11"
   }
 }
