@@ -12,10 +12,10 @@
 }
 
 .box-layout__box {
-    background: fade-out(white, 0.15);
+    background: fade-out($off-white, 0.15);
     border-radius:3px;
     text-align: center;
-    width: 23rem;
+    width: 25rem;
     padding: $l-size $m-size;
 
 }
@@ -23,4 +23,13 @@
 .box-layout__title {
     margin: 0 0 $m-size 0;
     line-height: 1;
+}
+
+.box-login {
+    margin: $l-size auto;
+    text-align: center;
+}
+
+.box__empty {
+    height: $xl-size;
 }

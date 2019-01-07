@@ -1,5 +1,5 @@
 .button {
-    background: $blue;
+    background-color: $blue;
     border: none;
     color: white;
     display: inline-block;
@@ -8,17 +8,40 @@
     line-height: 1;
     padding: $s-size;
     text-decoration: none;
-
-
 }
 
+.button--login {
+    background-color: $blue;
+    border-radius: 50px;
+    color: white;
+    font-size: $font-size-large;
+    line-height: 1;
+    padding: $s-size $l-size;
+    margin-top: $l-size;
+    width: 60%;
+}
+.button--click {
+    width: 90%;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.button--add {
+    border-radius: 0%;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: $s-size;
+    margin: $xs-size auto;
+    width: 150px;
+}
 .button--link {
     background: none;
     color: white;
     border: none;
-
+    font-weight: 300;
+    text-decoration: none;
 }
-
+.button--plus {
+   padding-top: $xs-size;
+}
 .button--secondary {
-    background: #888888;
+    background-color: #888888;
 }

@@ -8,7 +8,8 @@ export const PrivateRoute = ({
     component:Component,//rename component pros to uppercase "c" component.
     ...restProps //all the rest props that not destruring, ... is a rest operator
     }) => (
-    <Route {...restProps} component={(props)=>(//pass all the above destructured props to conpmnent
+    <Route {...restProps} component={(props)=>{
+        return (//pass all the above destructured props to component
             isAuthenticated ? (
                 <div>
                 <Header />
@@ -17,7 +18,8 @@ export const PrivateRoute = ({
                 ) : (
                     <Redirect to="/"/>
                 )
-        )}/>
+        )
+    }}/>
 );
 
 const mapStateToProps = (state) => ({

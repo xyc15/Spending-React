@@ -1,19 +1,18 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {startLogin} from '../actions/auth';
+import {Link} from 'react-router-dom';
 
-export const LoginPage = ({startLogin}) => (
+export const LoginPage = () => (
     <div className="box-layout"> 
         <div className="box-layout__box">
-            <h1 className="box-layout__title ">Boilerplate</h1>
-            <p>Tag line for app.</p>
-            <button className="button" onClick={startLogin}>Login With Google</button>
+            <h1 className="box-layout__title ">Spending</h1>
+            <p>Get a clear knowledge of your daily spendings.</p>
+            <Link className='button' to='/signUp'>Sign Up</Link>
+            <p></p>
+            <Link className='button' to='signIn'>Sign In</Link>
         </div>
     </div>
 );
 
-const mapDispatchToProps = (dispatch) => ({
-    startLogin: () => dispatch(startLogin())
-});
 
-export default connect(undefined, mapDispatchToProps)(LoginPage);
+
+export default LoginPage;

@@ -9,6 +9,8 @@ import AppRouter, {history} from './routers/AppRouter';
 /********connect Redux and React********/
 import configureStore from './store/configureStore';
 import {login, logout} from './actions/auth';
+import {startSetExpense} from './actions/expense';
+import {startSetIncome} from './actions/income';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
@@ -36,13 +38,19 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 firebase.auth().onAuthStateChanged((user) => {
     if(user){
         store.dispatch(login(user.uid));
-        renderAppp();
-        if(history.location.pathname === '/') {
-            history.push('./dashboard');
-        }
+        store.dispatch(startSetExpense()).then(() => {
+            store.dispatch(startSetIncome()).then(() => {
+                renderAppp();
+                if(history.location.pathname === '/'){
+                    history.push('/dashboard');
+                }
+            });
+        });
     } else {
         store.dispatch(logout());
         renderAppp();
-        history.push('/');
+        if(history.location.pathname !== '/signIn' && history.location.pathname !== '/signUp') {
+            history.push('/');
+        }
     }
 });   

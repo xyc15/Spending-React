@@ -11,3 +11,29 @@
     margin: 0 0 $m-size 0;
     font-style: italic;
 }
+.form-login {
+    display: block;
+    border-radius: 4px;
+    border: 1px solid $dark-white;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: $l-size;
+}
+
+.form__input {
+
+    margin: $m-size auto;
+    width: 90%;
+    line-height: 2;
+
+}
+.form__note {
+    text-align: left;
+    margin-top: $l-size;
+}
+.form__label {
+    display: block;
+    margin: $s-size auto;
+
+}
