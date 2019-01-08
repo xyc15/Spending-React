@@ -38,13 +38,9 @@
     "react": "16.0.0",
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.7.0",
-<<<<<<< HEAD
-    "react-dom": "16.0.0",
     "react-flash-message": "^1.0.2",
     "react-icons": "^3.2.2",
-=======
     "react-dom": "16.0.1",
->>>>>>> d4145a3516df947ac9db117aa5cc0b1150a6e87c
     "react-modal": "2.2.2",
     "react-redux": "5.0.5",
     "react-router-dom": "4.2.2",

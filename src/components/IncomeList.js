@@ -5,7 +5,7 @@ import getVisibleItems from '../selectors/getVisibleItems';
 
 const IncomeList = ({incomes, filters}) => {
         return (
-            <div className='content-container'>
+            <div className='content-container content-container--fixed'>
                 <div className='list-header'>
                     <p>Income</p>
                     <p>Amount</p>

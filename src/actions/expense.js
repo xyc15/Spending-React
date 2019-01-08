@@ -18,6 +18,7 @@ const startAddExpense = (expenseData = {}) => {
         } = expenseData;
 
         const expense = {date, amount, category};
+        console.log('in startAddExpense, expense is: ', expense);
         return database.ref(`users/${uid}/expenses`).push(expense).then(snapshot => {
             dispatch(addExpense({
                 id: snapshot.key,

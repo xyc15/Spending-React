@@ -14,13 +14,10 @@
 
 .list-body {
 
-    margin-bottom: $m-size;
+    margin-bottom: $s-size;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media(min-width: $desktop-breakpoint) {
-        margin-bottom: $l-size;
-    }
 }
 
 

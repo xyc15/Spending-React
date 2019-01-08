@@ -5,6 +5,8 @@
 }
 
 .content-container--fixed {
-    height: 20rem;
+    max-height: 25rem;
+    overflow: scroll;
     width: 100%;
+    margin-bottom: $l-size;
 }

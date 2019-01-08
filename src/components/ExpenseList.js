@@ -5,7 +5,7 @@ import getVisibleItems from '../selectors/getVisibleItems';
 
 const ExpenseList = ({expenses, filters}) => {
     return (
-        <div className='content-container'>
+        <div className='content-container content-container--fixed'>
             <div className='list-header'>
                 <p>Expense</p>
                 <p>Amount</p>
