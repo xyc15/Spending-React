@@ -16,7 +16,7 @@ import SignInPage from '../components/SignInPage';
 export const history = createHistory();
 
 const AppRouter = () => (
-    <Router history={history}> 
+    <Router history={history}>
     <div>
         <Switch>
             <PublicRoute path='/' exact={true} component={LoginPage} />
@@ -29,7 +29,7 @@ const AppRouter = () => (
             <PrivateRoute path= '/editIncome/:id' component={EditItemPage} />
             <Route component={NotFoundPage} />
         </Switch>
-    </div> 
+    </div>
 </Router>
 );
 export default AppRouter;
