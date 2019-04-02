@@ -66,7 +66,7 @@ module.exports = (env) => { //module.exports is a node thing, it's a way to expo
                 'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID),
             })
         ],
-        devtool: isProduction ? 'source-map' : 'inline-source-map', //https://webpack.js.org/configuration/devtool/#devtool
+        devtool: isProduction ? 'source-map' : false, //https://webpack.js.org/configuration/devtool/#devtool
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true ,
