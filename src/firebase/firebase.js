@@ -9,7 +9,7 @@ const config = {
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
   };
-
+console.log("config is: ", config.databaseURL)
 firebase.initializeApp(config);
 
 const database = firebase.database();
