@@ -9,13 +9,22 @@ export class SignInPage extends React.Component {
     state = {
         email: '',
         password: '',
-        error: ''    
+        error: ''
     }
     userSignIn = (e) => {
         e.preventDefault();
         //this.props.signIn(this.state.email, this.state.password);
         firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
             this.setState(() => ({error: error.message}));
+        });
+    }
+    loginAsGuest = (e) => {
+        e.preventDefault();
+
+        firebase.auth().signInAnonymously().catch(function(error) {
+          // Handle Errors here.
+          this.setState(() => ({error: error.message}));
+          // ...
         });
     }
     onInputEmail = (e) => {
@@ -42,6 +51,8 @@ export class SignInPage extends React.Component {
                         <p className='red font-size-medium'>{this.state.error}</p>
                     </FlashMessage>
                 }
+                    <button className="button--login" onClick={this.loginAsGuest}>Continue as Guest</button>
+                    <p>OR</p>
                     <button className="button--login" onClick={this.props.loginWithGoogle}>Login With Google</button>
                     <p>OR</p>
                     <form className='form-login'>

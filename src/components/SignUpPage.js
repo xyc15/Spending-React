@@ -12,6 +12,7 @@ export class SignUpPage extends React.Component {
     userSignUp = (e) => {
         e.preventDefault();
         //this.props.signUp(this.state.email, this.state.password);
+        const credential = firebase.auth.EmailAuthProvider.credential(this.state.email, this.state.password);
         firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
             this.setState(() => ({error: error.message}));
         });
@@ -35,7 +36,7 @@ export class SignUpPage extends React.Component {
             </div>
             <div className='content-container'>
                 <div className='box-login'>
-                    {this.state.error && 
+                    {this.state.error &&
                         <FlashMessage duration={5000} persistOnHover={true}>
                         <p>{this.state.error}</p>
                     </FlashMessage>}

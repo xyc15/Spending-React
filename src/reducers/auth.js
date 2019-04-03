@@ -3,6 +3,8 @@ export default (state = {}, action) => {
         case 'LOGIN':
             return {
                 uid: action.uid
+                //add credential for anonymous Acccount
+                //to be finished
             };
         case 'LOGOUT':
             return {};
