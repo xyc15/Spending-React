@@ -74,30 +74,47 @@ class Filters extends React.Component {
     render() {
         return (
           <div className="content-container">
-              <div className='input-group'>
-                  <input className='input-group__item' type='text' placeholder = 'Search expenses' value={this.state.text} onChange={this.onTextChange}/>
-                  <button className='input-group__item' onClick={this.onSortByDateChange}>Sort by Date
+              <div className='row align-items-center mb-4'>
+                  <div className="col-1 d-lg-none">
+                  </div>
+                  <input className='col-10 col-lg-3 mb-3 ml-lg-3 mr-lg-3 mb-lg-0  py-4 px-0' type='text' placeholder = 'Search expenses' value={this.state.text} onChange={this.onTextChange}/>
+                  <div className="col-1 col-lg-0 d-lg-none">
+                  </div>
+                  <div className="col-1 d-lg-none">
+                  </div>
+                  <button className='col-10  col-lg-2 mb-3  mb-lg-0  mr-lg-3 py-4 px-0' onClick={this.onSortByDateChange}>Sort by Date
                       <span>
                           {this.state.sortByDateIcon === 'down' && <FaChevronDown className='icon' />}
                           {this.state.sortByDateIcon === 'up' && <FaChevronUp className='icon' />}
                       </span>
                   </button>
-                  <button className='input-group__item' onClick={this.onSortByAmountChange}>Sort by Amount
+                  <div className="col-1 d-lg-none">
+                  </div>
+                  <div className="col-1 d-lg-none">
+                  </div>
+                  <button className='col-10 col-lg-2 mb-3 mb-lg-0  mr-lg-3 py-4 px-0' onClick={this.onSortByAmountChange}>Sort by Amount
                       <span>
                           {this.state.sortByAmountIcon === 'down' && <FaChevronDown className='icon' />}
                           {this.state.sortByAmountIcon === 'up' && <FaChevronUp className='icon' />}
                       </span>
                   </button>
-                  <div>
-                    <DateRangePicker
-                        startDate={this.state.startDate}
-                        endDate={this.state.endDate}
-                        onDatesChange={this.onDatesChange}
-                        focusedInput={this.state.focusedInput}
-                        onFocusChange={this.onFocusChange}
-                        numberOfMonths={1}
-                        isOutsideRange={()=>false}
-                    />
+                  <div className="col-1 d-lg-none">
+                  </div>
+                  <div className="col-1 d-lg-none">
+                  </div>
+
+                  <DateRangePicker
+                      className='col-10 col-lg-5 px-0'
+                      startDate={this.state.startDate}
+                      endDate={this.state.endDate}
+                      onDatesChange={this.onDatesChange}
+                      focusedInput={this.state.focusedInput}
+                      onFocusChange={this.onFocusChange}
+                      numberOfMonths={1}
+                      isOutsideRange={()=>false}
+                  />
+
+                  <div className="col-1 d-lg-none">
                   </div>
               </div>
             </div>
