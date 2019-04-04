@@ -4,7 +4,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import moment from 'moment';
 import {connect} from 'react-redux';
 import { setTextFilter, sortByDate, sortByAmount, sortByAmountHighToLow, sortByAmountLowToHigh,
-    sortByDateNewToOld, sortByDateOldToNew, setStartDate, setEndDate } from '../actions/filter'; 
+    sortByDateNewToOld, sortByDateOldToNew, setStartDate, setEndDate } from '../actions/filter';
 import { FaChevronDown,  FaChevronUp} from "react-icons/fa";
 
 class Filters extends React.Component {
@@ -32,14 +32,14 @@ class Filters extends React.Component {
                 sortBy: 'amount',
                 sortByAmount: 'highToLow',
                 sortByAmountIcon: 'down'
-            }));   
+            }));
         } else {
             this.props.sortByAmountLTH();
             return this.setState(() => ({
                 sortBy: 'amount',
                 sortByAmount: 'lowToHigh',
                 sortByAmountIcon: 'up'
-            })); 
+            }));
         }
     }
     onSortByDateChange = () => {
@@ -59,7 +59,7 @@ class Filters extends React.Component {
                 sortByDate: 'oldToNew',
                 sortByDateIcon: 'up'
 
-            }));  
+            }));
         }
     }
     onDatesChange = ({startDate, endDate}) => {
@@ -73,30 +73,33 @@ class Filters extends React.Component {
 
     render() {
         return (
-            <div className='input-group content-container'>
-                <input className='input-group__item' type='text' placeholder = 'Search expenses' value={this.state.text} onChange={this.onTextChange}/>
-                <button className='input-group__item' onClick={this.onSortByDateChange}>Sort by Date 
-                    <span>
-                        {this.state.sortByDateIcon === 'down' && <FaChevronDown className='icon' />}
-                        {this.state.sortByDateIcon === 'up' && <FaChevronUp className='icon' />}
-                    </span>
-                </button>
-                <button className='input-group__item' onClick={this.onSortByAmountChange}>Sort by Amount
-                    <span>
-                        {this.state.sortByAmountIcon === 'down' && <FaChevronDown className='icon' />}
-                        {this.state.sortByAmountIcon === 'up' && <FaChevronUp className='icon' />}
-                    </span>
-                </button>
-                <DateRangePicker 
-                    
-                    startDate={this.state.startDate}
-                    endDate={this.state.endDate}
-                    onDatesChange={this.onDatesChange}
-                    focusedInput={this.state.focusedInput}
-                    onFocusChange={this.onFocusChange}
-                    numberOfMonths={1}
-                    isOutsideRange={()=>false}
-                />
+          <div className="content-container">
+              <div className='input-group'>
+                  <input className='input-group__item' type='text' placeholder = 'Search expenses' value={this.state.text} onChange={this.onTextChange}/>
+                  <button className='input-group__item' onClick={this.onSortByDateChange}>Sort by Date
+                      <span>
+                          {this.state.sortByDateIcon === 'down' && <FaChevronDown className='icon' />}
+                          {this.state.sortByDateIcon === 'up' && <FaChevronUp className='icon' />}
+                      </span>
+                  </button>
+                  <button className='input-group__item' onClick={this.onSortByAmountChange}>Sort by Amount
+                      <span>
+                          {this.state.sortByAmountIcon === 'down' && <FaChevronDown className='icon' />}
+                          {this.state.sortByAmountIcon === 'up' && <FaChevronUp className='icon' />}
+                      </span>
+                  </button>
+                  <div>
+                    <DateRangePicker
+                        startDate={this.state.startDate}
+                        endDate={this.state.endDate}
+                        onDatesChange={this.onDatesChange}
+                        focusedInput={this.state.focusedInput}
+                        onFocusChange={this.onFocusChange}
+                        numberOfMonths={1}
+                        isOutsideRange={()=>false}
+                    />
+                  </div>
+              </div>
             </div>
         );
     }

@@ -47,7 +47,7 @@ export default class Form extends React.Component {
             };
             this.props.onSubmit(item);
         }
-   
+
     }
     render() {
         return (
@@ -58,7 +58,7 @@ export default class Form extends React.Component {
                 </FlashMessage>
             }
             <form onSubmit={this.onSubmit} className='form'>
-                <SingleDatePicker 
+                <SingleDatePicker
                     date={this.state.date}
                     onDateChange={this.onDateChange}
                     focused={this.state.focused}
@@ -66,11 +66,11 @@ export default class Form extends React.Component {
                     numberOfMonths={1}
                     isOutsideRange={()=>false}
                 />
-                <input className='text-input' type='number' placeholder='Amount' value={this.state.amount} onChange={this.onAmountChange} />
+                <input className='text-input' type='number' min= '0.01' step='0.01' placeholder='Amount' value={this.state.amount} onChange={this.onAmountChange} />
                 {this.props.type==='expense'?
                     <select className='text-input' onChange={this.onCategoryChange} value={this.state.category}>
                         <option >Select</option>
-                        <option>General</option>    
+                        <option>General</option>
                         <option>Holidays</option>
                         <option>Shopping</option>
                         <option>Clothes</option>
@@ -81,21 +81,20 @@ export default class Form extends React.Component {
                         <option>Kids</option>
                         <option>Sports</option>
                         <option>Travel</option>
-                    </select> 
-                : (this.props.type==='income' ? 
+                    </select>
+                : (this.props.type==='income' ?
                     <select className='text-input' onChange={this.onCategoryChange} value={this.state.category} >
-                        <option >Select</option>    
+                        <option >Select</option>
                         <option>Salary</option>
-                        <option>Carry Over</option>
+                        <option>Other</option>
                     </select> : null)
-                    
+
                 }
                 <div>
                 <button className='button'>Save</button>
                 </div>
-            </form> 
+            </form>
             </div>
         );
     }
 }
-

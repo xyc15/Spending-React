@@ -7,11 +7,12 @@ const ExpenseList = ({expenses, filters}) => {
     return (
         <div className='content-container content-container--fixed'>
             <div className='list-header'>
-                <p>Expense</p>
-                <p>Amount</p>
+                <p className='show-for-mobile'>Expense</p>
+                <p className='show-for-desktop'>Expense</p>
+                <p className='show-for-desktop'>Amount</p>
             </div>
             <div className='list-body'>
-            {getVisibleItems(expenses, filters).map(item => 
+            {getVisibleItems(expenses, filters).map(item =>
                 <ExpenseListItem key={item.id} {...item} />)}
             </div>
         </div>

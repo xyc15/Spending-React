@@ -9,9 +9,7 @@ const IncomeListItem = ({id, date, amount, category}) => {
                 <h3 className='list-item__title'> {category} </h3>
                 <span className='list-item__subtitle'>{moment(date).format('MMMM Do YYYY')}</span>
             </div>
-            <div className='list-item__data'>
-                <h3>{amount}</h3>
-            </div>
+            <h3 className='list-item__data'>${amount}</h3>
         </Link>
     )
 };
