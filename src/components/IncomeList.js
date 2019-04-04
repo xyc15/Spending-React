@@ -7,11 +7,12 @@ const IncomeList = ({incomes, filters}) => {
         return (
             <div className='content-container content-container--fixed'>
                 <div className='list-header'>
-                    <p>Income</p>
-                    <p>Amount</p>
+                  <p className='show-for-mobile'>Income</p>
+                  <p className='show-for-desktop'>Income</p>
+                  <p className='show-for-desktop'>Amount</p>
                 </div>
                 <div className='list-body'>
-                {getVisibleItems(incomes, filters).map(item => 
+                {getVisibleItems(incomes, filters).map(item =>
                     <IncomeListItem key={item.id} {...item} />)}
                 </div>
             </div>

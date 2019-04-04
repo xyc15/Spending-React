@@ -1,4 +1,10 @@
 .input-group {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: -moz-box;
+-webkit-flex-direction: column;
+-webkit-justify-content: space-between;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -7,6 +13,7 @@ text-align: center;
 
 @media (min-width: $desktop-breakpoint) {
     flex-direction: row;
+    -webkit-flex-direction: row;
     margin-bottom: $l-size;
 }
 
