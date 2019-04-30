@@ -43,12 +43,13 @@ export class SignUpPage extends React.Component {
                     <div className='box__empty'>
                     </div>
                     <form className='form-login'>
-                        <label className='form_label'>E-mail Address <br />
+                        <label className='form__label'>E-mail Address <br />
                             <input className='form__input' type='email' value={this.state.email} onChange={this.onInputEmail} />
                         </label>
-                        <label className='form_label'>Password <br />
+                        <label className='form__label'>Password <br />
                             <input className='form__input' type='password' value={this.state.password} onChange={this.onInputPassword}/>
                         </label>
+
                         <button className='button--login button--click' onClick={this.userSignUp} >Sign up</button>
                         <p className='form__note'>Aleady a customer?</p>
                         <div  className='button--login button--click'>
