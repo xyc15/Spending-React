@@ -51,6 +51,7 @@ export class SignUpPage extends React.Component {
                         </label>
 
                         <button className='button--login button--click' onClick={this.userSignUp} >Sign up</button>
+
                         <p className='form__note'>Aleady a customer?</p>
                         <div  className='button--login button--click'>
                             <Link className='button--link' to='/signIn'>Sign in to your Spending Acccount</Link>

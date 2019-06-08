@@ -1,6 +1,7 @@
 .form {
     display: flex;
     flex-direction: column;//from top to bottom
+    // text-decoration: none;
 
     > * {
         margin-bottom: $m-size;
