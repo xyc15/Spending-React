@@ -1,7 +1,7 @@
 
 .list-header {
-    background-color: $off-white;
-    border: 1px solid darken($off-white, 7%);
+    background-color: $light-blue;
+    border: 1px solid darken($light-blue, 7%);
     color: $grey;
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,7 @@
 
 
 .list-item {
-    border: 1px solid darken($off-white, 7%);
+    border: 1px solid darken($light-blue, 7%);
     border-top: none;
     color: $dark-grey;
     display: flex;
@@ -32,7 +32,7 @@
     transition: background-color .3s ease;
 
     &:hover{
-        background-color: $off-white;
+        background-color: $light-blue;
     }
     @media (min-width: $desktop-breakpoint) {
         align-items: center;
