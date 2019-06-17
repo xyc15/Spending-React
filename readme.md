@@ -1,7 +1,6 @@
-# git commands
+# detailed features of this app
+ ## All expense and income can be sorted by date, amount, and be filtered by keyword and date.  
+ ## User can log in as a guest, through a google account, or through username/password.  
+ ## Used React-Redux library to manage state and React components, React-Router for client-side URL navigation. Set up authentication and data management using firebase.
 
-git init - Create a new git repo
-git status - View the changes to your projects code
-git add - Add files to staging area
-git commit - Create a new commit with files from staging area
-git log - View recent commits
+
